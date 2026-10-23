@@ -3,33 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My NGINX Site</title>
+    <title>linuxporn</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e0e0e0;
             text-align: center;
-            background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            line-height: 1.6;
         }
-        h1 { color: #009688; }
-        p { font-size: 1.1rem; }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: #0f0f0f;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            padding: 4rem 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #009639;
+            text-shadow: 0 0 20px rgba(0, 150, 57, 0.25);
+            margin-bottom: 2.5rem;
+            background: #1e1e1e;
+            padding: 0.4rem 1.6rem;
+            border-radius: 4px;
+            border: 1px solid #2d2d2d;
+            display: inline-block;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            color: #e0e0e0;
+        }
+
+        .message {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .message .accent {
+            color: #009639;
+            text-shadow: 0 0 12px rgba(0, 150, 57, 0.3);
+        }
+
+        .status {
+            font-size: 1.2rem;
+            color: #aaaaaa;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+        }
+
+        .status .blink {
+            animation: blink-animation 1.2s step-end infinite;
+            color: #009639;
+            font-weight: 700;
+        }
+
+        @keyframes blink-animation {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 2.5rem 1.2rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+                padding: 0.3rem 1rem;
+            }
+
+            .message {
+                font-size: 1.5rem;
+            }
+
+            .status {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Success! NGINX is serving your site.</h1>
-        <p>Replace this file with your custom HTML/CSS content to build your landing page.</p>
+
+        <div class="logo">linux<span>porn</span></div>
+
+        <div class="message">
+            <span class="accent">linuxporn</span> is under construction
+        </div>
+
+        <div class="status">
+            coming soon <span class="blink">█</span>
+        </div>
+
     </div>
 </body>
 </html>
